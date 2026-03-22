@@ -25,18 +25,18 @@ export default function SettlementPanel({ players, onBack, onEndGame }) {
                 <div className="flex gap-2">
                     <button
                         onClick={onBack}
-                        className="px-4 py-2 rounded-xl text-sm font-semibold
+                        className="px-5 py-2.5 rounded-xl text-sm font-bold
               dark:bg-felt-700 dark:hover:bg-felt-600 dark:text-felt-200
               bg-felt-100 hover:bg-felt-200 text-felt-700
-              transition-colors duration-150"
+              transition-all duration-200 active:scale-95 hover:scale-[1.03]"
                     >
                         ← Edit Chips
                     </button>
                     <button
                         onClick={onEndGame}
-                        className="px-4 py-2 rounded-xl text-sm font-semibold
-              bg-chip-green hover:bg-green-600 text-white
-              transition-colors duration-150 shadow-lg shadow-green-500/20"
+                        className="px-5 py-2.5 rounded-xl text-sm font-extrabold
+              bg-success hover:brightness-110 text-white
+              transition-all duration-300 shadow-lg shadow-success/30 hover:shadow-xl hover:shadow-success/50 hover:scale-[1.02] active:scale-95"
                     >
                         ✓ Save & End Game
                     </button>

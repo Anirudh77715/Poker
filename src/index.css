@@ -46,6 +46,13 @@
   --color-felt-100: var(--color-primary-100);
   --color-felt-50: var(--color-primary-50);
 
+  /* Map old chips and gold */
+  --color-gold-500: var(--color-accent-500);
+  --color-gold-400: var(--color-accent-400);
+  --color-gold-300: var(--color-accent-300);
+  --color-chip-green: var(--color-success);
+  --color-chip-red: var(--color-danger);
+
   --font-family-sans: 'Inter', system-ui, sans-serif;
 }
 

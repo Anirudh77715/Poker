@@ -78,9 +78,9 @@ export default function RebuyModal({ player, buyIn, onConfirm, onClose }) {
                 <div className="flex gap-3">
                     <button
                         onClick={onClose}
-                        className="flex-1 py-3 rounded-xl font-semibold transition-all duration-200
+                        className="flex-1 py-3 rounded-xl font-bold transition-all duration-200
               dark:bg-felt-700 dark:hover:bg-felt-600 dark:text-felt-200
-              bg-gray-100 hover:bg-gray-200 text-felt-700"
+              bg-gray-100 hover:bg-gray-200 text-felt-700 active:scale-95"
                     >
                         Cancel
                     </button>
@@ -88,10 +88,11 @@ export default function RebuyModal({ player, buyIn, onConfirm, onClose }) {
                         id="confirm-rebuy-btn"
                         onClick={handleConfirm}
                         disabled={amount <= 0}
-                        className="flex-1 py-3 rounded-xl font-semibold transition-all duration-200
-              bg-gold-500 hover:bg-gold-400 text-felt-900
+                        className="flex-1 py-3 rounded-xl font-extrabold transition-all duration-300
+              bg-gradient-to-r from-accent-500 to-accent-400 text-white
+              hover:from-accent-400 hover:to-accent-300
               disabled:opacity-40 disabled:cursor-not-allowed
-              active:scale-95"
+              active:scale-95 hover:scale-[1.02] shadow-lg shadow-accent-500/30 hover:shadow-xl hover:shadow-accent-500/50"
                     >
                         Confirm Rebuy
                     </button>

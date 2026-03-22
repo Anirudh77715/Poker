@@ -135,12 +135,11 @@ export default function App() {
           <nav className="flex -mb-px">
             {tabs.map((tab) => (
               <button
-                key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 py-2 text-xs sm:text-sm font-semibold rounded-t-lg transition-all duration-200 flex items-center justify-center gap-1.5
-                  ${activeTab === tab.id
+                className={`flex-1 py-2 text-xs sm:text-sm font-semibold rounded-t-lg transition-all duration-300 flex items-center justify-center gap-1.5 active:scale-95
+                                    ${activeTab === tab.id
                     ? 'dark:bg-surface-card bg-white dark:text-primary-300 text-primary-600 border-b-2 dark:border-primary-400 border-primary-500'
-                    : 'dark:text-primary-500 text-primary-400 hover:dark:text-primary-300 hover:text-primary-600'
+                    : 'dark:text-primary-500 text-primary-400 hover:dark:text-primary-300 hover:text-primary-600 hover:bg-primary-50/50 dark:hover:bg-primary-900/50'
                   }`}
               >
                 <span className="hidden sm:inline">{tab.label}</span>
@@ -183,9 +182,9 @@ export default function App() {
                       onClick={calculateResults} disabled={!allChipsEntered}
                       className="w-full py-3.5 sm:py-4 rounded-2xl font-bold text-base sm:text-lg transition-all duration-300
                         bg-gradient-to-r from-primary-500 via-pink-500 to-primary-500 text-white
-                        hover:shadow-lg hover:shadow-pink-500/25
+                        hover:shadow-xl hover:shadow-pink-500/40 hover:scale-[1.02]
                         disabled:opacity-30 disabled:cursor-not-allowed
-                        active:scale-[0.98]"
+                        active:scale-95"
                     >
                       🏆 Calculate Results
                     </button>
@@ -196,14 +195,14 @@ export default function App() {
                     )}
                     {!showResetConfirm ? (
                       <button onClick={() => setShowResetConfirm(true)}
-                        className="w-full py-2 text-xs font-medium dark:text-primary-600 text-primary-400 hover:text-danger transition-colors">
+                        className="w-full py-2 text-xs font-bold dark:text-danger text-danger hover:bg-danger/10 rounded-lg transition-all active:scale-95">
                         Reset Game
                       </button>
                     ) : (
                       <div className="flex gap-2 p-3 rounded-xl bg-danger/10 border border-danger/20 animate-scale-in">
-                        <span className="text-sm text-danger flex-1 flex items-center">⚠️ Discard?</span>
-                        <button onClick={resetGame} className="px-4 py-1.5 rounded-lg text-xs font-bold bg-danger text-white">Yes</button>
-                        <button onClick={() => setShowResetConfirm(false)} className="px-4 py-1.5 rounded-lg text-xs font-bold dark:bg-primary-700 bg-primary-100 dark:text-primary-200 text-primary-700">No</button>
+                        <span className="text-sm text-danger flex-1 flex items-center font-bold">⚠️ Discard Game?</span>
+                        <button onClick={resetGame} className="px-5 py-2 rounded-lg text-xs font-bold bg-danger text-white hover:bg-red-600 transition-colors active:scale-95 shadow-lg shadow-danger/30 hover:scale-105">Yes</button>
+                        <button onClick={() => setShowResetConfirm(false)} className="px-5 py-2 rounded-lg text-xs font-bold dark:bg-primary-700 bg-primary-100 dark:text-primary-200 text-primary-700 hover:bg-primary-200 dark:hover:bg-primary-600 transition-colors active:scale-95">No</button>
                       </div>
                     )}
                   </div>

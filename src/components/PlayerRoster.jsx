@@ -42,10 +42,10 @@ export default function PlayerRoster({ roster, stats, onAddToRoster, onRemoveFro
                 <button
                     type="submit"
                     disabled={!name.trim()}
-                    className="px-6 py-3 rounded-xl font-semibold transition-all duration-200
-            bg-felt-600 hover:bg-felt-500 text-white
+                    className="px-6 py-3 rounded-xl font-bold transition-all duration-300
+            bg-primary-600 hover:bg-primary-500 text-white
             disabled:opacity-40 disabled:cursor-not-allowed
-            active:scale-95 shadow-lg shadow-felt-600/20"
+            active:scale-95 hover:scale-[1.02] shadow-lg shadow-primary-500/30 hover:shadow-xl"
                 >
                     + Add to Roster
                 </button>
@@ -175,8 +175,7 @@ export default function PlayerRoster({ roster, stats, onAddToRoster, onRemoveFro
                                         {/* Remove from roster */}
                                         <button
                                             onClick={() => onRemoveFromRoster(player.id)}
-                                            className="mt-4 text-xs dark:text-felt-500 text-felt-400
-                        hover:text-chip-red dark:hover:text-chip-red transition-colors"
+                                            className="mt-4 px-3 py-1.5 rounded-lg text-xs font-semibold text-danger bg-danger/10 hover:bg-danger hover:text-white transition-all duration-200 active:scale-95 shadow-sm"
                                         >
                                             Remove from roster
                                         </button>

@@ -25,14 +25,14 @@ export default function GameHistory({ history, stats, onClearHistory }) {
                         <div className="flex gap-2 animate-scale-in">
                             <button
                                 onClick={() => { onClearHistory(); setShowClearConfirm(false); }}
-                                className="px-3 py-1 rounded-lg text-xs font-semibold bg-chip-red text-white"
+                                className="px-4 py-1.5 rounded-lg text-xs font-bold bg-danger text-white hover:bg-red-600 transition-all active:scale-95 shadow-md shadow-danger/30"
                             >
                                 Confirm
                             </button>
                             <button
                                 onClick={() => setShowClearConfirm(false)}
-                                className="px-3 py-1 rounded-lg text-xs font-semibold
-                  dark:bg-felt-700 dark:text-felt-200 bg-gray-200 text-felt-700"
+                                className="px-4 py-1.5 rounded-lg text-xs font-bold
+                  dark:bg-felt-700 dark:hover:bg-felt-600 dark:text-felt-200 bg-gray-200 hover:bg-gray-300 text-felt-700 transition-all active:scale-95"
                             >
                                 Cancel
                             </button>

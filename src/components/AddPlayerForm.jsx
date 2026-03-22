@@ -64,10 +64,10 @@ export default function AddPlayerForm({
                             id="add-player-btn"
                             type="submit"
                             disabled={!name.trim() || players.length >= MAX_PLAYERS}
-                            className="px-6 py-3 rounded-xl font-semibold transition-all duration-200
-                bg-felt-600 hover:bg-felt-500 text-white
+                            className="px-6 py-3 rounded-xl font-bold transition-all duration-300
+                bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white
                 disabled:opacity-40 disabled:cursor-not-allowed
-                active:scale-95 shadow-lg shadow-felt-600/20"
+                active:scale-95 hover:scale-[1.02] shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/40"
                         >
                             + Add Player
                         </button>
@@ -88,10 +88,10 @@ export default function AddPlayerForm({
                                         <button
                                             key={r.id}
                                             onClick={() => { onAddRosterPlayer(r); }}
-                                            className="px-3 py-1.5 rounded-full text-sm font-medium
+                                            className="px-3 py-1.5 rounded-full text-sm font-semibold
                         dark:bg-felt-700 dark:hover:bg-felt-600 dark:text-felt-100
                         bg-felt-100 hover:bg-felt-200 text-felt-700
-                        transition-colors duration-150 animate-scale-in"
+                        transition-all duration-200 animate-scale-in active:scale-95 hover:scale-[1.03]"
                                         >
                                             + {r.name}
                                         </button>
@@ -146,11 +146,11 @@ export default function AddPlayerForm({
                     id="start-game-btn"
                     onClick={onStartGame}
                     disabled={!canStart}
-                    className="w-full py-4 rounded-xl font-bold text-lg transition-all duration-300
-            bg-gradient-to-r from-gold-500 to-gold-400 text-felt-900
-            hover:from-gold-400 hover:to-gold-300
+                    className="w-full py-4 rounded-xl font-extrabold text-lg transition-all duration-300
+            bg-gradient-to-r from-accent-500 to-accent-400 text-white
+            hover:from-accent-400 hover:to-accent-300
             disabled:opacity-30 disabled:cursor-not-allowed
-            active:scale-[0.98] shadow-xl shadow-gold-500/20"
+            active:scale-95 hover:scale-[1.02] shadow-xl shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/40"
                 >
                     🃏 Start Game
                 </button>

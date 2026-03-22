@@ -112,10 +112,10 @@ export default function PlayerTable({ players, onUpdateChips, onOpenRebuy, onRem
                                             <td className="py-3 px-4 text-center">
                                                 <button
                                                     onClick={() => onOpenRebuy(player)}
-                                                    className="px-3 py-1.5 rounded-lg text-xs font-semibold
+                                                    className="px-4 py-2 rounded-lg text-xs font-bold
                             dark:bg-felt-700 dark:hover:bg-felt-600 dark:text-felt-100
-                            bg-felt-100 hover:bg-felt-200 text-felt-700
-                            transition-colors duration-150"
+                            bg-primary-100 hover:bg-primary-200 text-primary-700
+                            transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md"
                                                 >
                                                     + Rebuy
                                                 </button>
@@ -126,10 +126,10 @@ export default function PlayerTable({ players, onUpdateChips, onOpenRebuy, onRem
                                         <td className="py-3 px-4 text-center">
                                             <button
                                                 onClick={() => onRemovePlayer(player.id)}
-                                                className="w-7 h-7 rounded-full flex items-center justify-center mx-auto
-                          dark:hover:bg-chip-red/20 hover:bg-chip-red/10
-                          dark:text-felt-400 text-felt-500 hover:text-chip-red
-                          transition-colors duration-150"
+                                                className="w-8 h-8 rounded-full flex items-center justify-center mx-auto
+                          dark:hover:bg-danger/20 hover:bg-danger/10
+                          dark:text-felt-400 text-felt-500 hover:text-danger
+                          transition-all duration-200 active:scale-90"
                                                 aria-label={`Remove ${player.name}`}
                                             >
                                                 ✕
@@ -167,16 +167,16 @@ export default function PlayerTable({ players, onUpdateChips, onOpenRebuy, onRem
                                 {gameStarted ? (
                                     <button
                                         onClick={() => onOpenRebuy(player)}
-                                        className="px-3 py-1 rounded-lg text-xs font-semibold
-                      dark:bg-felt-700 dark:text-felt-100
-                      bg-felt-100 text-felt-700"
+                                        className="px-4 py-1.5 rounded-lg text-xs font-bold
+                      dark:bg-felt-700 dark:hover:bg-felt-600 dark:text-felt-100
+                      bg-primary-100 hover:bg-primary-200 text-primary-700 transition-all active:scale-95 shadow-sm"
                                     >
                                         + Rebuy
                                     </button>
                                 ) : (
                                     <button
                                         onClick={() => onRemovePlayer(player.id)}
-                                        className="text-felt-400 hover:text-chip-red transition-colors"
+                                        className="w-8 h-8 rounded-full flex items-center justify-center dark:hover:bg-danger/20 hover:bg-danger/10 text-felt-400 hover:text-danger transition-all duration-200 active:scale-90"
                                         aria-label={`Remove ${player.name}`}
                                     >
                                         ✕
