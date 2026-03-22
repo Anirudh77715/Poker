@@ -34,8 +34,22 @@
   --color-surface-light: #faf5ff;
   --color-surface-light-card: #ffffff;
 
+  /* Map old 'felt' colors to the new palette so components don't break */
+  --color-felt-900: var(--color-primary-900);
+  --color-felt-800: var(--color-surface-card);
+  --color-felt-700: var(--color-primary-700);
+  --color-felt-600: var(--color-primary-600);
+  --color-felt-500: var(--color-primary-500);
+  --color-felt-400: var(--color-primary-400);
+  --color-felt-300: var(--color-primary-300);
+  --color-felt-200: var(--color-primary-200);
+  --color-felt-100: var(--color-primary-100);
+  --color-felt-50: var(--color-primary-50);
+
   --font-family-sans: 'Inter', system-ui, sans-serif;
 }
+
+@custom-variant dark (&:is(.dark *));
 
 html {
   font-family: var(--font-family-sans);
